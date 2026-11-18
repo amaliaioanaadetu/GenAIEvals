@@ -1,0 +1,5 @@
+jsonschema>=4.18
+rapidfuzz>=3.0
+# live generation / LLM judge (optional)
+openai>=1.40
+anthropic>=0.40

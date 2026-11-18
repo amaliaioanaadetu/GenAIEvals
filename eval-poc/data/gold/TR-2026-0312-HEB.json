@@ -1,0 +1,24 @@
+{
+  "transcript_id": "TR-2026-0312-HEB",
+  "annotator": "demo",
+  "segments": [
+    {"start_line": 1,  "end_line": 3,  "segment_type": "headlines",   "topics": ["transport", "public_safety", "sports"], "tone": "neutral"},
+    {"start_line": 4,  "end_line": 12, "segment_type": "news_report", "topics": ["transport", "politics"],                  "tone": "neutral"},
+    {"start_line": 13, "end_line": 18, "segment_type": "news_report", "topics": ["public_safety", "transport"],             "tone": "urgent"},
+    {"start_line": 19, "end_line": 23, "segment_type": "interview",   "topics": ["economy", "transport"],                   "tone": "critical"},
+    {"start_line": 24, "end_line": 26, "segment_type": "sports",      "topics": ["sports"],                                 "tone": "positive"},
+    {"start_line": 27, "end_line": 27, "segment_type": "outro",       "topics": [],                                         "tone": "neutral"}
+  ],
+  "events": [
+    {"gold_id": "G-EVT-1", "event_type": "policy_decision", "event_date": "2026-03-12", "evidence": {"start_line": 4,  "end_line": 6},  "key_entities": ["Halden City Council"]},
+    {"gold_id": "G-EVT-2", "event_type": "announcement",    "event_date": "2026-04-02", "evidence": {"start_line": 11, "end_line": 11}, "key_entities": ["Northgate Transit Authority"]},
+    {"gold_id": "G-EVT-3", "event_type": "incident",        "event_date": "2026-03-12", "evidence": {"start_line": 14, "end_line": 18}, "key_entities": ["Eastport"]},
+    {"gold_id": "G-EVT-4", "event_type": "sports_result",   "event_date": "2026-03-12", "evidence": {"start_line": 25, "end_line": 26}, "key_entities": ["Harbour Hawks", "Riverside United"]}
+  ],
+  "quotes": [
+    {"line": 8,  "speaker_name": "Ana Petrescu", "tone": "positive"},
+    {"line": 10, "speaker_name": "Erik Lund",    "tone": "critical"},
+    {"line": 16, "speaker_name": "Jonas Ek",     "tone": "neutral"},
+    {"line": 23, "speaker_name": "Lena Hart",    "tone": "critical"}
+  ]
+}

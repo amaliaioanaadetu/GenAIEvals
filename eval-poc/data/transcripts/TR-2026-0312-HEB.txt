@@ -1,0 +1,32 @@
+# transcript_id: TR-2026-0312-HEB
+# show_name: Halden Evening Brief
+# broadcast_date: 2026-03-12
+# duration_seconds: 200
+# language: en
+[L001] [00:00:00] Maria Ionescu: Good evening, this is the Halden Evening Brief. I'm Maria Ionescu.
+[L002] [00:00:06] Maria Ionescu: Tonight: the city council votes to freeze transit fares, a warehouse fire closes the eastern ring road, and the Harbour Hawks win at home.
+[L003] [00:00:15] Maria Ionescu: We start at City Hall, where our reporter Tomas Berg has been following the vote.
+[L004] [00:00:21] Tomas Berg: Thanks, Maria. This afternoon the Halden City Council voted 9 to 4 to freeze public transit fares until the end of 2027.
+[L005] [00:00:31] Tomas Berg: The single-ride fare will stay at 2.40 euros, and the monthly pass at 48 euros.
+[L006] [00:00:39] Tomas Berg: The freeze is expected to cost the Northgate Transit Authority around 6.5 million euros a year in lost revenue.
+[L007] [00:00:48] Tomas Berg: Councillor Ana Petrescu, who proposed the measure, spoke after the vote.
+[L008] [00:00:53] Ana Petrescu: People are choosing between a bus ticket and groceries. This freeze gives families one less thing to worry about.
+[L009] [00:01:02] Tomas Berg: Not everyone is convinced. Councillor Erik Lund voted against.
+[L010] [00:01:07] Erik Lund: Nobody has explained where the six and a half million will come from. This is a promise without a budget.
+[L011] [00:01:16] Tomas Berg: The transit authority says it will present a revised budget to the council on April 2.
+[L012] [00:01:23] Tomas Berg: Back to you, Maria.
+[L013] [00:01:25] Maria Ionescu: Thank you, Tomas. Now to breaking news on the east side of the city.
+[L014] [00:01:31] Maria Ionescu: A fire broke out early this morning at a logistics warehouse in the Eastport industrial zone.
+[L015] [00:01:39] Maria Ionescu: Fire chief Jonas Ek told us crews were called at 4:50 a.m. and had the blaze under control by 9 a.m.
+[L016] [00:01:48] Jonas Ek: We had 60 firefighters on site at the peak. Thankfully, the building was empty and nobody was injured.
+[L017] [00:01:57] Maria Ionescu: The eastern ring road remains closed between exits 7 and 9 while inspectors check the site.
+[L018] [00:02:05] Maria Ionescu: Police say the cause of the fire is not yet known, and drivers should expect delays through tomorrow.
+[L019] [00:02:12] Maria Ionescu: Joining me now is economist Lena Hart from Halden University to talk about what the fare freeze means for the city budget.
+[L020] [00:02:21] Lena Hart: For riders it's clearly good news. But 6.5 million a year is roughly 3 percent of the transit authority's operating budget.
+[L021] [00:02:31] Lena Hart: If the city doesn't cover that gap, the most likely outcome is fewer buses on low-traffic routes.
+[L022] [00:02:39] Maria Ionescu: So the risk is that service gets worse even as prices stay flat?
+[L023] [00:02:44] Lena Hart: Exactly. A frozen fare on a bus that comes every 40 minutes is not much of a win.
+[L024] [00:02:52] Maria Ionescu: To sports, and a big night for the Harbour Hawks.
+[L025] [00:02:57] Maria Ionescu: The Hawks beat Riverside United 3 to 1 at Harbour Park, with two goals from striker Dani Okafor.
+[L026] [00:03:06] Maria Ionescu: The win moves them up to second place in the regional league, four points behind the leaders.
+[L027] [00:03:13] Maria Ionescu: That's the Halden Evening Brief for tonight. Thanks for watching, and good night.

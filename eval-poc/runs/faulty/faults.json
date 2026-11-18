@@ -1,0 +1,180 @@
+[
+  {
+    "example_id": "TR-2026-0312-HEB",
+    "fault_type": "altered_quote",
+    "item_ref": "quote:Q-01",
+    "description": "Quote reworded: 'groceries' became 'rent'",
+    "expected_checks": [
+      "quote_verbatim"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0312-HEB",
+    "fault_type": "wrong_figure",
+    "item_ref": "event:EVT-01",
+    "description": "Lost revenue changed from 6.5 to 8.5 million euros",
+    "expected_checks": [
+      "figure_grounding"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0312-HEB",
+    "fault_type": "dropped_event",
+    "item_ref": null,
+    "description": "Sports result event removed",
+    "expected_checks": [
+      "event_recall"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0312-HEB",
+    "fault_type": "wrong_tone",
+    "item_ref": "segment:SEG-03",
+    "description": "Fire report tone changed from 'urgent' to 'positive'",
+    "expected_checks": [
+      "segment_tone"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0312-HEB",
+    "fault_type": "wrong_timestamp",
+    "item_ref": "segment:SEG-05",
+    "description": "Sports segment start time off by 2 seconds",
+    "expected_checks": [
+      "segment_timestamps"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0312-HEB",
+    "fault_type": "distorted_summary",
+    "item_ref": "segment:SEG-04",
+    "description": "Summary reverses the economist's point (no new names or numbers)",
+    "expected_checks": [
+      "judge_faithfulness"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0313-ML",
+    "fault_type": "wrong_speaker",
+    "item_ref": "quote:Q-02",
+    "description": "Mihai's quote attributed to Greta",
+    "expected_checks": [
+      "quote_speaker"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0313-ML",
+    "fault_type": "wrong_date",
+    "item_ref": "event:EVT-01",
+    "description": "'Next Monday' resolved to the wrong week (2026-03-23)",
+    "expected_checks": [
+      "event_date"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0313-ML",
+    "fault_type": "boundary_shift",
+    "item_ref": "segment:SEG-03",
+    "description": "Listener-calls segment starts two lines late, leaving a gap",
+    "expected_checks": [
+      "segment_coverage",
+      "segment_boundaries"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0313-ML",
+    "fault_type": "hallucinated_name",
+    "item_ref": "event:EVT-03",
+    "description": "Description gains an invented quote from a non-existent mayor",
+    "expected_checks": [
+      "text_grounding"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0313-ML",
+    "fault_type": "hallucinated_entity",
+    "item_ref": "event:EVT-02",
+    "description": "Invented person added to entities",
+    "expected_checks": [
+      "entity_grounding"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0314-HT",
+    "fault_type": "wrong_id",
+    "item_ref": "transcript_id",
+    "description": "Transcript ID mistyped",
+    "expected_checks": [
+      "header_fields"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0314-HT",
+    "fault_type": "invented_event",
+    "item_ref": "event:EVT-04",
+    "description": "Plausible but invented event: developer withdraws application",
+    "expected_checks": [
+      "event_precision",
+      "judge_faithfulness"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0314-HT",
+    "fault_type": "schema_violation",
+    "item_ref": "segment:SEG-02",
+    "description": "Segment type 'breaking_news' is not an allowed value",
+    "expected_checks": [
+      "schema_valid"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0314-HT",
+    "fault_type": "bad_evidence",
+    "item_ref": "event:EVT-03",
+    "description": "Court-fine evidence points at the interview lines",
+    "expected_checks": [
+      "references"
+    ],
+    "detected": false,
+    "detected_by": null
+  },
+  {
+    "example_id": "TR-2026-0314-HT",
+    "fault_type": "wrong_topic",
+    "item_ref": "segment:SEG-04",
+    "description": "Topic 'environment' replaced with 'health'",
+    "expected_checks": [
+      "segment_topics"
+    ],
+    "detected": false,
+    "detected_by": null
+  }
+]

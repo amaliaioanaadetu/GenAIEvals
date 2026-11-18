@@ -1,0 +1,20 @@
+{
+  "transcript_id": "TR-2026-0314-HT",
+  "annotator": "demo",
+  "segments": [
+    {"start_line": 1,  "end_line": 1,  "segment_type": "intro",       "topics": [],                                  "tone": "neutral"},
+    {"start_line": 2,  "end_line": 9,  "segment_type": "news_report", "topics": ["environment", "local_community"], "tone": "neutral"},
+    {"start_line": 10, "end_line": 12, "segment_type": "news_report", "topics": ["crime_justice", "business"],      "tone": "neutral"},
+    {"start_line": 13, "end_line": 16, "segment_type": "interview",   "topics": ["environment", "business"],       "tone": "neutral"},
+    {"start_line": 17, "end_line": 17, "segment_type": "outro",       "topics": [],                                  "tone": "neutral"}
+  ],
+  "events": [
+    {"gold_id": "G-EVT-1", "event_type": "protest",          "event_date": "2026-03-14", "evidence": {"start_line": 2,  "end_line": 4},  "key_entities": ["Miller's Field"]},
+    {"gold_id": "G-EVT-2", "event_type": "announcement",     "event_date": "2026-04-09", "evidence": {"start_line": 9,  "end_line": 9},  "key_entities": ["planning committee"]},
+    {"gold_id": "G-EVT-3", "event_type": "legal_proceeding", "event_date": null,         "evidence": {"start_line": 10, "end_line": 12}, "key_entities": ["CleanCity"]}
+  ],
+  "quotes": [
+    {"line": 7,  "speaker_name": "Petra Holm",    "tone": "negative"},
+    {"line": 14, "speaker_name": "Samuel Reyes",  "tone": "critical"}
+  ]
+}

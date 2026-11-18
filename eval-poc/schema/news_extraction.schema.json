@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NewsTranscriptExtraction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "transcript_id", "broadcast", "speakers", "segments", "events", "quotes"],
+  "properties": {
+    "schema_version": { "type": "string", "enum": ["1.0"] },
+    "transcript_id": { "type": "string", "pattern": "^TR-\\d{4}-\\d{4}-[A-Z]+$" },
+    "broadcast": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["show_name", "broadcast_date", "duration_seconds", "language"],
+      "properties": {
+        "show_name": { "type": "string" },
+        "broadcast_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "duration_seconds": { "type": "integer", "minimum": 0 },
+        "language": { "type": "string", "pattern": "^[a-z]{2}$" }
+      }
+    },
+    "speakers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["speaker_id", "name", "role"],
+        "properties": {
+          "speaker_id": { "type": "string", "pattern": "^SPK\\d+$" },
+          "name": { "type": "string" },
+          "role": { "type": "string", "enum": ["anchor", "reporter", "official", "guest_expert", "member_of_public", "other"] }
+        }
+      }
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["segment_id", "start_line", "end_line", "start_time", "segment_type", "title", "topics", "tone", "summary"],
+        "properties": {
+          "segment_id": { "type": "string", "pattern": "^SEG-\\d{2}$" },
+          "start_line": { "type": "integer", "minimum": 1 },
+          "end_line": { "type": "integer", "minimum": 1 },
+          "start_time": { "type": "string", "pattern": "^\\d{2}:\\d{2}:\\d{2}$" },
+          "segment_type": { "$ref": "#/$defs/segment_type" },
+          "title": { "type": "string" },
+          "topics": { "type": "array", "items": { "$ref": "#/$defs/topic" } },
+          "tone": { "$ref": "#/$defs/tone" },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["event_id", "segment_id", "event_type", "description", "event_date", "location", "entities", "figures", "evidence"],
+        "properties": {
+          "event_id": { "type": "string", "pattern": "^EVT-\\d{2}$" },
+          "segment_id": { "type": "string", "pattern": "^SEG-\\d{2}$" },
+          "event_type": { "$ref": "#/$defs/event_type" },
+          "description": { "type": "string" },
+          "event_date": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "location": { "type": ["string", "null"] },
+          "entities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["name", "type"],
+              "properties": {
+                "name": { "type": "string" },
+                "type": { "type": "string", "enum": ["person", "organization", "location", "other"] }
+              }
+            }
+          },
+          "figures": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["value", "context"],
+              "properties": {
+                "value": { "type": "string" },
+                "context": { "type": "string" }
+              }
+            }
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["start_line", "end_line"],
+            "properties": {
+              "start_line": { "type": "integer", "minimum": 1 },
+              "end_line": { "type": "integer", "minimum": 1 }
+            }
+          }
+        }
+      }
+    },
+    "quotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["quote_id", "segment_id", "speaker_id", "line", "text", "tone"],
+        "properties": {
+          "quote_id": { "type": "string", "pattern": "^Q-\\d{2}$" },
+          "segment_id": { "type": "string", "pattern": "^SEG-\\d{2}$" },
+          "speaker_id": { "type": "string", "pattern": "^SPK\\d+$" },
+          "line": { "type": "integer", "minimum": 1 },
+          "text": { "type": "string" },
+          "tone": { "$ref": "#/$defs/tone" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "tone": {
+      "type": "string",
+      "enum": ["neutral", "positive", "negative", "urgent", "critical", "somber", "celebratory", "conversational"]
+    },
+    "segment_type": {
+      "type": "string",
+      "enum": ["intro", "headlines", "news_report", "interview", "listener_calls", "weather", "sports", "outro"]
+    },
+    "event_type": {
+      "type": "string",
+      "enum": ["policy_decision", "announcement", "incident", "protest", "economic_data", "legal_proceeding", "weather_event", "sports_result", "other"]
+    },
+    "topic": {
+      "type": "string",
+      "enum": ["politics", "economy", "transport", "health", "education", "environment", "crime_justice", "housing", "technology", "business", "culture", "sports", "weather", "public_safety", "local_community", "international"]
+    }
+  }
+}

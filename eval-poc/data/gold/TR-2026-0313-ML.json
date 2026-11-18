@@ -1,0 +1,21 @@
+{
+  "transcript_id": "TR-2026-0313-ML",
+  "annotator": "demo",
+  "segments": [
+    {"start_line": 1,  "end_line": 3,  "segment_type": "headlines",      "topics": ["health"],              "tone": "conversational"},
+    {"start_line": 4,  "end_line": 10, "segment_type": "news_report",    "topics": ["health"],              "tone": "neutral"},
+    {"start_line": 11, "end_line": 16, "segment_type": "listener_calls", "topics": ["housing", "economy"],   "tone": "negative"},
+    {"start_line": 17, "end_line": 19, "segment_type": "weather",        "topics": ["weather"],             "tone": "urgent"},
+    {"start_line": 20, "end_line": 20, "segment_type": "outro",          "topics": [],                      "tone": "neutral"}
+  ],
+  "events": [
+    {"gold_id": "G-EVT-1", "event_type": "announcement",  "event_date": "2026-03-16", "evidence": {"start_line": 4,  "end_line": 5},  "key_entities": ["St. Brigid's Hospital"]},
+    {"gold_id": "G-EVT-2", "event_type": "announcement",  "event_date": "2026-03-27", "evidence": {"start_line": 16, "end_line": 16}, "key_entities": ["housing office"]},
+    {"gold_id": "G-EVT-3", "event_type": "weather_event", "event_date": "2026-03-13", "evidence": {"start_line": 17, "end_line": 18}, "key_entities": []}
+  ],
+  "quotes": [
+    {"line": 7,  "speaker_name": "Irina Vasile", "tone": "neutral"},
+    {"line": 12, "speaker_name": "Mihai",        "tone": "negative"},
+    {"line": 15, "speaker_name": "Greta",        "tone": "negative"}
+  ]
+}

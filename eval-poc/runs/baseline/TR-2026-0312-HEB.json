@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "transcript_id": "TR-2026-0312-HEB",
+  "broadcast": {"show_name": "Halden Evening Brief", "broadcast_date": "2026-03-12", "duration_seconds": 200, "language": "en"},
+  "speakers": [
+    {"speaker_id": "SPK1", "name": "Maria Ionescu", "role": "anchor"},
+    {"speaker_id": "SPK2", "name": "Tomas Berg", "role": "reporter"},
+    {"speaker_id": "SPK3", "name": "Ana Petrescu", "role": "official"},
+    {"speaker_id": "SPK4", "name": "Erik Lund", "role": "official"},
+    {"speaker_id": "SPK5", "name": "Jonas Ek", "role": "official"},
+    {"speaker_id": "SPK6", "name": "Lena Hart", "role": "guest_expert"}
+  ],
+  "segments": [
+    {"segment_id": "SEG-01", "start_line": 1, "end_line": 3, "start_time": "00:00:00", "segment_type": "headlines", "title": "Opening headlines", "topics": ["transport", "public_safety", "sports"], "tone": "neutral",
+     "summary": "Maria Ionescu opens the programme and previews the transit fare freeze, a warehouse fire and a Harbour Hawks win."},
+    {"segment_id": "SEG-02", "start_line": 4, "end_line": 12, "start_time": "00:00:21", "segment_type": "news_report", "title": "Council votes to freeze transit fares", "topics": ["transport", "politics", "economy"], "tone": "neutral",
+     "summary": "Tomas Berg reports that the Halden City Council voted 9 to 4 to freeze transit fares until the end of 2027, at an estimated cost of 6.5 million euros a year to the Northgate Transit Authority. Ana Petrescu defends the measure while Erik Lund says it has no budget."},
+    {"segment_id": "SEG-03", "start_line": 13, "end_line": 18, "start_time": "00:01:25", "segment_type": "news_report", "title": "Warehouse fire closes eastern ring road", "topics": ["public_safety", "transport"], "tone": "urgent",
+     "summary": "A fire at a logistics warehouse in the Eastport industrial zone was brought under control by 9 a.m. with no injuries. The eastern ring road is closed between exits 7 and 9 and the cause is not yet known."},
+    {"segment_id": "SEG-04", "start_line": 19, "end_line": 23, "start_time": "00:02:12", "segment_type": "interview", "title": "Economist on the cost of the fare freeze", "topics": ["economy", "transport"], "tone": "critical",
+     "summary": "Economist Lena Hart says the freeze is good for riders but equals roughly 3 percent of the transit operating budget, and warns it could lead to fewer buses on low-traffic routes."},
+    {"segment_id": "SEG-05", "start_line": 24, "end_line": 26, "start_time": "00:02:52", "segment_type": "sports", "title": "Harbour Hawks beat Riverside United", "topics": ["sports"], "tone": "positive",
+     "summary": "The Harbour Hawks beat Riverside United 3 to 1 at Harbour Park with two goals from Dani Okafor, moving up to second place."},
+    {"segment_id": "SEG-06", "start_line": 27, "end_line": 27, "start_time": "00:03:13", "segment_type": "outro", "title": "Sign-off", "topics": [], "tone": "neutral",
+     "summary": "Maria Ionescu closes the programme."}
+  ],
+  "events": [
+    {"event_id": "EVT-01", "segment_id": "SEG-02", "event_type": "policy_decision",
+     "description": "The Halden City Council voted 9 to 4 to freeze public transit fares until the end of 2027, keeping the single-ride fare at 2.40 euros and the monthly pass at 48 euros.",
+     "event_date": "2026-03-12", "location": "Halden",
+     "entities": [{"name": "Halden City Council", "type": "organization"}, {"name": "Ana Petrescu", "type": "person"}, {"name": "Erik Lund", "type": "person"}],
+     "figures": [{"value": "9 to 4", "context": "council vote"}, {"value": "2.40 euros", "context": "single-ride fare"}, {"value": "48 euros", "context": "monthly pass"}, {"value": "6.5 million euros", "context": "estimated annual lost revenue"}],
+     "evidence": {"start_line": 4, "end_line": 6}},
+    {"event_id": "EVT-02", "segment_id": "SEG-02", "event_type": "announcement",
+     "description": "The Northgate Transit Authority will present a revised budget to the council on April 2.",
+     "event_date": "2026-04-02", "location": "Halden",
+     "entities": [{"name": "Northgate Transit Authority", "type": "organization"}],
+     "figures": [], "evidence": {"start_line": 11, "end_line": 11}},
+    {"event_id": "EVT-03", "segment_id": "SEG-03", "event_type": "incident",
+     "description": "A fire broke out early in the morning at a logistics warehouse in the Eastport industrial zone and was under control by 9 a.m. Nobody was injured.",
+     "event_date": "2026-03-12", "location": "Eastport industrial zone, Halden",
+     "entities": [{"name": "Jonas Ek", "type": "person"}, {"name": "Eastport", "type": "location"}],
+     "figures": [{"value": "60 firefighters", "context": "crews on site at peak"}],
+     "evidence": {"start_line": 14, "end_line": 16}},
+    {"event_id": "EVT-04", "segment_id": "SEG-03", "event_type": "incident",
+     "description": "The eastern ring road is closed between exits 7 and 9 while inspectors check the fire site, with delays expected through tomorrow.",
+     "event_date": "2026-03-12", "location": "Eastern ring road, Halden",
+     "entities": [], "figures": [], "evidence": {"start_line": 17, "end_line": 18}},
+    {"event_id": "EVT-05", "segment_id": "SEG-05", "event_type": "sports_result",
+     "description": "The Harbour Hawks beat Riverside United 3 to 1 at Harbour Park, with two goals from Dani Okafor.",
+     "event_date": "2026-03-12", "location": "Harbour Park, Halden",
+     "entities": [{"name": "Harbour Hawks", "type": "organization"}, {"name": "Riverside United", "type": "organization"}, {"name": "Dani Okafor", "type": "person"}],
+     "figures": [{"value": "3 to 1", "context": "final score"}],
+     "evidence": {"start_line": 25, "end_line": 26}}
+  ],
+  "quotes": [
+    {"quote_id": "Q-01", "segment_id": "SEG-02", "speaker_id": "SPK3", "line": 8, "text": "People are choosing between a bus ticket and groceries. This freeze gives families one less thing to worry about.", "tone": "positive"},
+    {"quote_id": "Q-02", "segment_id": "SEG-02", "speaker_id": "SPK4", "line": 10, "text": "This is a promise without a budget.", "tone": "critical"},
+    {"quote_id": "Q-03", "segment_id": "SEG-03", "speaker_id": "SPK5", "line": 16, "text": "Thankfully, the building was empty and nobody was injured.", "tone": "neutral"},
+    {"quote_id": "Q-04", "segment_id": "SEG-04", "speaker_id": "SPK6", "line": 23, "text": "A frozen fare on a bus that comes every 40 minutes is not much of a win.", "tone": "critical"}
+  ]
+}
