@@ -6,17 +6,21 @@ from pathlib import Path
 from . import checks_gold, checks_grounding, checks_structure
 from .paths import GOLD, TRANSCRIPTS
 from .results import CHECKS, EvalResult
+from .shape import flatten
 from .transcript import load_transcript
 
 
-def evaluate_output(out: dict, example_id: str, use_judge: bool = False) -> list:
+def evaluate_output(raw: dict, example_id: str, use_judge: bool = False) -> list:
+    """`raw` is the model output as returned (events and quotes nested in segments).
+    The schema is validated on that; every other check runs on the flattened form."""
     tr = load_transcript(TRANSCRIPTS / f"{example_id}.txt")
-    results = []
+    results = checks_structure.check_schema(raw, tr)
+    out = flatten(raw)
     for check in checks_structure.ALL + checks_grounding.ALL:
         results += check(out, tr)
     gold_path = GOLD / f"{example_id}.json"
     if gold_path.exists():
-        gold = json.loads(gold_path.read_text())
+        gold = flatten(json.loads(gold_path.read_text()))  # gold uses the same nested layout
         for check in checks_gold.ALL:
             results += check(out, gold, tr)
     if use_judge:

@@ -18,16 +18,22 @@ def _validator():
 
 
 def _path_to_ref(out: dict, path: list) -> str:
-    """Turn a JSON-schema error path like ['segments', 2, 'tone'] into 'segment:SEG-03'."""
+    """Turn a JSON-schema error path into the most specific item ref, e.g.
+    ['segments', 2, 'tone'] -> 'segment:SEG-03' and
+    ['segments', 1, 'events', 0, 'event_type'] -> 'event:EVT-02'."""
     id_keys = {"segments": ("segment", "segment_id"), "events": ("event", "event_id"),
                "quotes": ("quote", "quote_id"), "speakers": ("speaker", "speaker_id")}
-    if len(path) >= 2 and path[0] in id_keys and isinstance(path[1], int):
-        prefix, key = id_keys[path[0]]
+    ref, node = None, out
+    for i, step in enumerate(path):
         try:
-            return f"{prefix}:{out[path[0]][path[1]].get(key, path[1])}"
-        except (IndexError, AttributeError, KeyError):
-            pass
-    return "output" if not path else str(path[0])
+            child = node[step]
+        except (IndexError, KeyError, TypeError):
+            break
+        if isinstance(step, int) and i > 0 and path[i - 1] in id_keys:
+            prefix, key = id_keys[path[i - 1]]
+            ref = f"{prefix}:{child.get(key, step) if isinstance(child, dict) else step}"
+        node = child
+    return ref or ("output" if not path else str(path[0]))
 
 
 def check_schema(out: dict, tr: Transcript) -> list:
@@ -132,4 +138,5 @@ def check_references(out: dict, tr: Transcript) -> list:
     return res
 
 
-ALL = [check_schema, check_header, check_speakers, check_segments, check_references]
+# check_schema is not in ALL: evaluate.py runs it on the raw nested output before flattening.
+ALL = [check_header, check_speakers, check_segments, check_references]

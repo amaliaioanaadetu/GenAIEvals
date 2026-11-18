@@ -1,46 +1,206 @@
 {
   "schema_version": "1.0",
   "transcript_id": "TR-2026-0314-HT",
-  "broadcast": {"show_name": "Halden Tonight", "broadcast_date": "2026-03-14", "duration_seconds": 120, "language": "en"},
+  "broadcast": {
+    "show_name": "Halden Tonight",
+    "broadcast_date": "2026-03-14",
+    "duration_seconds": 120,
+    "language": "en"
+  },
   "speakers": [
-    {"speaker_id": "SPK1", "name": "David Cole", "role": "anchor"},
-    {"speaker_id": "SPK2", "name": "Nora Klein", "role": "reporter"},
-    {"speaker_id": "SPK3", "name": "Petra Holm", "role": "member_of_public"},
-    {"speaker_id": "SPK4", "name": "Samuel Reyes", "role": "guest_expert"}
+    {
+      "speaker_id": "SPK1",
+      "name": "David Cole",
+      "role": "anchor"
+    },
+    {
+      "speaker_id": "SPK2",
+      "name": "Nora Klein",
+      "role": "reporter"
+    },
+    {
+      "speaker_id": "SPK3",
+      "name": "Petra Holm",
+      "role": "member_of_public"
+    },
+    {
+      "speaker_id": "SPK4",
+      "name": "Samuel Reyes",
+      "role": "guest_expert"
+    }
   ],
   "segments": [
-    {"segment_id": "SEG-01", "start_line": 1, "end_line": 1, "start_time": "00:00:00", "segment_type": "intro", "title": "Opening", "topics": [], "tone": "neutral",
-     "summary": "David Cole opens Halden Tonight."},
-    {"segment_id": "SEG-02", "start_line": 2, "end_line": 9, "start_time": "00:00:04", "segment_type": "news_report", "title": "March against Miller's Field data centre", "topics": ["environment", "local_community"], "tone": "neutral",
-     "summary": "Nora Klein reports on a peaceful march against a planned 120-megawatt Coldwater Digital data centre on Miller's Field, with police estimating 4,000 participants and organisers 7,000. The developer promises 300 permanent jobs, and the planning committee decides on April 9."},
-    {"segment_id": "SEG-03", "start_line": 10, "end_line": 12, "start_time": "00:01:02", "segment_type": "news_report", "title": "CleanCity fined over missed collections", "topics": ["crime_justice", "business"], "tone": "neutral",
-     "summary": "The regional court fined waste company CleanCity 1.2 million euros for missing collections on 23 days in July and August 2025. CleanCity plans to appeal."},
-    {"segment_id": "SEG-04", "start_line": 13, "end_line": 16, "start_time": "00:01:27", "segment_type": "interview", "title": "Planner on the data centre debate", "topics": ["environment", "business"], "tone": "neutral",
-     "summary": "Urban planner Samuel Reyes says both sides have a point but Miller's Field should never have been zoned for industry, and suggests the old rail depot in Eastport as an alternative site."},
-    {"segment_id": "SEG-05", "start_line": 17, "end_line": 17, "start_time": "00:01:55", "segment_type": "outro", "title": "Sign-off", "topics": [], "tone": "neutral",
-     "summary": "David Cole closes the programme."}
-  ],
-  "events": [
-    {"event_id": "EVT-01", "segment_id": "SEG-02", "event_type": "protest",
-     "description": "Thousands marched through Halden city centre against plans for a data centre on Miller's Field; police estimated 4,000 participants and organisers 7,000.",
-     "event_date": "2026-03-14", "location": "Halden city centre",
-     "entities": [{"name": "Miller's Field", "type": "location"}, {"name": "Coldwater Digital", "type": "organization"}, {"name": "Petra Holm", "type": "person"}],
-     "figures": [{"value": "4,000", "context": "police estimate of participants"}, {"value": "7,000", "context": "organisers' estimate"}],
-     "evidence": {"start_line": 2, "end_line": 4}},
-    {"event_id": "EVT-02", "segment_id": "SEG-02", "event_type": "announcement",
-     "description": "The planning committee is due to decide on Coldwater Digital's data centre application on April 9.",
-     "event_date": "2026-04-09", "location": "Halden",
-     "entities": [{"name": "Coldwater Digital", "type": "organization"}],
-     "figures": [], "evidence": {"start_line": 9, "end_line": 9}},
-    {"event_id": "EVT-03", "segment_id": "SEG-03", "event_type": "legal_proceeding",
-     "description": "The regional court fined waste company CleanCity 1.2 million euros for missing collections on 23 days in July and August 2025; the company says it will appeal.",
-     "event_date": "2026-03-14", "location": "Halden",
-     "entities": [{"name": "CleanCity", "type": "organization"}],
-     "figures": [{"value": "1.2 million euros", "context": "fine"}, {"value": "23 days", "context": "days with missed collections"}],
-     "evidence": {"start_line": 10, "end_line": 12}}
-  ],
-  "quotes": [
-    {"quote_id": "Q-01", "segment_id": "SEG-02", "speaker_id": "SPK3", "line": 7, "text": "Miller's Field is the last green space in this district. Once it's concrete, it's gone forever.", "tone": "negative"},
-    {"quote_id": "Q-02", "segment_id": "SEG-04", "speaker_id": "SPK4", "line": 14, "text": "Halden needs jobs, but a site like Miller's Field should never have been zoned for industry in the first place.", "tone": "critical"}
+    {
+      "segment_id": "SEG-01",
+      "start_line": 1,
+      "end_line": 1,
+      "start_time": "00:00:00",
+      "segment_type": "intro",
+      "title": "Opening",
+      "topics": [],
+      "tone": "neutral",
+      "summary": "David Cole opens Halden Tonight.",
+      "events": [],
+      "quotes": []
+    },
+    {
+      "segment_id": "SEG-02",
+      "start_line": 2,
+      "end_line": 9,
+      "start_time": "00:00:04",
+      "segment_type": "news_report",
+      "title": "March against Miller's Field data centre",
+      "topics": [
+        "environment",
+        "local_community"
+      ],
+      "tone": "neutral",
+      "summary": "Nora Klein reports on a peaceful march against a planned 120-megawatt Coldwater Digital data centre on Miller's Field, with police estimating 4,000 participants and organisers 7,000. The developer promises 300 permanent jobs, and the planning committee decides on April 9.",
+      "events": [
+        {
+          "event_id": "EVT-01",
+          "event_type": "protest",
+          "description": "Thousands marched through Halden city centre against plans for a data centre on Miller's Field; police estimated 4,000 participants and organisers 7,000.",
+          "event_date": "2026-03-14",
+          "location": "Halden city centre",
+          "entities": [
+            {
+              "name": "Miller's Field",
+              "type": "location"
+            },
+            {
+              "name": "Coldwater Digital",
+              "type": "organization"
+            },
+            {
+              "name": "Petra Holm",
+              "type": "person"
+            }
+          ],
+          "figures": [
+            {
+              "value": "4,000",
+              "context": "police estimate of participants"
+            },
+            {
+              "value": "7,000",
+              "context": "organisers' estimate"
+            }
+          ],
+          "evidence": {
+            "start_line": 2,
+            "end_line": 4
+          }
+        },
+        {
+          "event_id": "EVT-02",
+          "event_type": "announcement",
+          "description": "The planning committee is due to decide on Coldwater Digital's data centre application on April 9.",
+          "event_date": "2026-04-09",
+          "location": "Halden",
+          "entities": [
+            {
+              "name": "Coldwater Digital",
+              "type": "organization"
+            }
+          ],
+          "figures": [],
+          "evidence": {
+            "start_line": 9,
+            "end_line": 9
+          }
+        }
+      ],
+      "quotes": [
+        {
+          "quote_id": "Q-01",
+          "speaker_id": "SPK3",
+          "line": 7,
+          "text": "Miller's Field is the last green space in this district. Once it's concrete, it's gone forever.",
+          "tone": "negative"
+        }
+      ]
+    },
+    {
+      "segment_id": "SEG-03",
+      "start_line": 10,
+      "end_line": 12,
+      "start_time": "00:01:02",
+      "segment_type": "news_report",
+      "title": "CleanCity fined over missed collections",
+      "topics": [
+        "crime_justice",
+        "business"
+      ],
+      "tone": "neutral",
+      "summary": "The regional court fined waste company CleanCity 1.2 million euros for missing collections on 23 days in July and August 2025. CleanCity plans to appeal.",
+      "events": [
+        {
+          "event_id": "EVT-03",
+          "event_type": "legal_proceeding",
+          "description": "The regional court fined waste company CleanCity 1.2 million euros for missing collections on 23 days in July and August 2025; the company says it will appeal.",
+          "event_date": "2026-03-14",
+          "location": "Halden",
+          "entities": [
+            {
+              "name": "CleanCity",
+              "type": "organization"
+            }
+          ],
+          "figures": [
+            {
+              "value": "1.2 million euros",
+              "context": "fine"
+            },
+            {
+              "value": "23 days",
+              "context": "days with missed collections"
+            }
+          ],
+          "evidence": {
+            "start_line": 10,
+            "end_line": 12
+          }
+        }
+      ],
+      "quotes": []
+    },
+    {
+      "segment_id": "SEG-04",
+      "start_line": 13,
+      "end_line": 16,
+      "start_time": "00:01:27",
+      "segment_type": "interview",
+      "title": "Planner on the data centre debate",
+      "topics": [
+        "environment",
+        "business"
+      ],
+      "tone": "neutral",
+      "summary": "Urban planner Samuel Reyes says both sides have a point but Miller's Field should never have been zoned for industry, and suggests the old rail depot in Eastport as an alternative site.",
+      "events": [],
+      "quotes": [
+        {
+          "quote_id": "Q-02",
+          "speaker_id": "SPK4",
+          "line": 14,
+          "text": "Halden needs jobs, but a site like Miller's Field should never have been zoned for industry in the first place.",
+          "tone": "critical"
+        }
+      ]
+    },
+    {
+      "segment_id": "SEG-05",
+      "start_line": 17,
+      "end_line": 17,
+      "start_time": "00:01:55",
+      "segment_type": "outro",
+      "title": "Sign-off",
+      "topics": [],
+      "tone": "neutral",
+      "summary": "David Cole closes the programme.",
+      "events": [],
+      "quotes": []
+    }
   ]
 }

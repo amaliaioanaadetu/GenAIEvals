@@ -46,7 +46,9 @@
         "health"
       ],
       "tone": "conversational",
-      "summary": "Sofia Marin opens Morning Line on Halden Radio and previews the opening of a new emergency wing at St. Brigid's Hospital."
+      "summary": "Sofia Marin opens Morning Line on Halden Radio and previews the opening of a new emergency wing at St. Brigid's Hospital.",
+      "events": [],
+      "quotes": []
     },
     {
       "segment_id": "SEG-02",
@@ -59,7 +61,49 @@
         "health"
       ],
       "tone": "neutral",
-      "summary": "Pavel Novak reports the new wing adds 40 emergency beds and two trauma bays at a cost of 32 million euros. Director Irina Vasile wants average waits under two hours by year end, while the nurses' union says only 52 of 85 needed nurses have been hired."
+      "summary": "Pavel Novak reports the new wing adds 40 emergency beds and two trauma bays at a cost of 32 million euros. Director Irina Vasile wants average waits under two hours by year end, while the nurses' union says only 52 of 85 needed nurses have been hired.",
+      "events": [
+        {
+          "event_id": "EVT-01",
+          "event_type": "announcement",
+          "description": "St. Brigid's Hospital will open its new emergency wing, which adds 40 emergency beds and two trauma bays and cost 32 million euros.",
+          "event_date": "2026-03-23",
+          "location": "St. Brigid's Hospital, Halden",
+          "entities": [
+            {
+              "name": "St. Brigid's Hospital",
+              "type": "organization"
+            },
+            {
+              "name": "Irina Vasile",
+              "type": "person"
+            }
+          ],
+          "figures": [
+            {
+              "value": "40 emergency beds",
+              "context": "capacity added"
+            },
+            {
+              "value": "32 million euros",
+              "context": "construction cost"
+            }
+          ],
+          "evidence": {
+            "start_line": 4,
+            "end_line": 5
+          }
+        }
+      ],
+      "quotes": [
+        {
+          "quote_id": "Q-01",
+          "speaker_id": "SPK3",
+          "line": 7,
+          "text": "Our target is under two hours by the end of the year.",
+          "tone": "neutral"
+        }
+      ]
     },
     {
       "segment_id": "SEG-03",
@@ -73,7 +117,47 @@
         "economy"
       ],
       "tone": "negative",
-      "summary": "Listeners discuss rising rents in Halden. Mihai says his rent rose 18 percent in January, while small landlord Greta says her own costs, including insurance, have also increased. The housing office will publish new average rent figures on March 27."
+      "summary": "Listeners discuss rising rents in Halden. Mihai says his rent rose 18 percent in January, while small landlord Greta says her own costs, including insurance, have also increased. The housing office will publish new average rent figures on March 27.",
+      "events": [
+        {
+          "event_id": "EVT-02",
+          "event_type": "announcement",
+          "description": "The city's housing office will publish new figures on average rents on March 27.",
+          "event_date": "2026-03-27",
+          "location": "Halden",
+          "entities": [
+            {
+              "name": "housing office",
+              "type": "organization"
+            },
+            {
+              "name": "Dr. Helena Strand",
+              "type": "person"
+            }
+          ],
+          "figures": [],
+          "evidence": {
+            "start_line": 16,
+            "end_line": 16
+          }
+        }
+      ],
+      "quotes": [
+        {
+          "quote_id": "Q-02",
+          "speaker_id": "SPK5",
+          "line": 12,
+          "text": "My rent went up 18 percent in January. Same flat, same landlord, nothing repaired.",
+          "tone": "negative"
+        },
+        {
+          "quote_id": "Q-03",
+          "speaker_id": "SPK5",
+          "line": 15,
+          "text": "It's not only tenants who are struggling.",
+          "tone": "negative"
+        }
+      ]
     },
     {
       "segment_id": "SEG-04",
@@ -86,7 +170,28 @@
         "weather"
       ],
       "tone": "urgent",
-      "summary": "A coastal storm warning runs from 6 p.m. tonight until Saturday noon, with gusts of up to 90 kilometres an hour and the harbour ferry suspended on Saturday morning."
+      "summary": "A coastal storm warning runs from 6 p.m. tonight until Saturday noon, with gusts of up to 90 kilometres an hour and the harbour ferry suspended on Saturday morning.",
+      "events": [
+        {
+          "event_id": "EVT-03",
+          "event_type": "weather_event",
+          "description": "A storm warning is in place for the coast from 6 p.m. until Saturday noon, with gusts of up to 90 kilometres an hour. The harbour ferry service is suspended for Saturday morning. Mayor Viktor Sand called it the worst storm in 40 years.",
+          "event_date": "2026-03-13",
+          "location": "Halden coast",
+          "entities": [],
+          "figures": [
+            {
+              "value": "90 kilometres an hour",
+              "context": "maximum gust speed"
+            }
+          ],
+          "evidence": {
+            "start_line": 17,
+            "end_line": 18
+          }
+        }
+      ],
+      "quotes": []
     },
     {
       "segment_id": "SEG-05",
@@ -97,109 +202,9 @@
       "title": "Sign-off",
       "topics": [],
       "tone": "neutral",
-      "summary": "Sofia Marin closes the hour."
-    }
-  ],
-  "events": [
-    {
-      "event_id": "EVT-01",
-      "segment_id": "SEG-02",
-      "event_type": "announcement",
-      "description": "St. Brigid's Hospital will open its new emergency wing, which adds 40 emergency beds and two trauma bays and cost 32 million euros.",
-      "event_date": "2026-03-23",
-      "location": "St. Brigid's Hospital, Halden",
-      "entities": [
-        {
-          "name": "St. Brigid's Hospital",
-          "type": "organization"
-        },
-        {
-          "name": "Irina Vasile",
-          "type": "person"
-        }
-      ],
-      "figures": [
-        {
-          "value": "40 emergency beds",
-          "context": "capacity added"
-        },
-        {
-          "value": "32 million euros",
-          "context": "construction cost"
-        }
-      ],
-      "evidence": {
-        "start_line": 4,
-        "end_line": 5
-      }
-    },
-    {
-      "event_id": "EVT-02",
-      "segment_id": "SEG-03",
-      "event_type": "announcement",
-      "description": "The city's housing office will publish new figures on average rents on March 27.",
-      "event_date": "2026-03-27",
-      "location": "Halden",
-      "entities": [
-        {
-          "name": "housing office",
-          "type": "organization"
-        },
-        {
-          "name": "Dr. Helena Strand",
-          "type": "person"
-        }
-      ],
-      "figures": [],
-      "evidence": {
-        "start_line": 16,
-        "end_line": 16
-      }
-    },
-    {
-      "event_id": "EVT-03",
-      "segment_id": "SEG-04",
-      "event_type": "weather_event",
-      "description": "A storm warning is in place for the coast from 6 p.m. until Saturday noon, with gusts of up to 90 kilometres an hour. The harbour ferry service is suspended for Saturday morning. Mayor Viktor Sand called it the worst storm in 40 years.",
-      "event_date": "2026-03-13",
-      "location": "Halden coast",
-      "entities": [],
-      "figures": [
-        {
-          "value": "90 kilometres an hour",
-          "context": "maximum gust speed"
-        }
-      ],
-      "evidence": {
-        "start_line": 17,
-        "end_line": 18
-      }
-    }
-  ],
-  "quotes": [
-    {
-      "quote_id": "Q-01",
-      "segment_id": "SEG-02",
-      "speaker_id": "SPK3",
-      "line": 7,
-      "text": "Our target is under two hours by the end of the year.",
-      "tone": "neutral"
-    },
-    {
-      "quote_id": "Q-02",
-      "segment_id": "SEG-03",
-      "speaker_id": "SPK5",
-      "line": 12,
-      "text": "My rent went up 18 percent in January. Same flat, same landlord, nothing repaired.",
-      "tone": "negative"
-    },
-    {
-      "quote_id": "Q-03",
-      "segment_id": "SEG-03",
-      "speaker_id": "SPK5",
-      "line": 15,
-      "text": "It's not only tenants who are struggling.",
-      "tone": "negative"
+      "summary": "Sofia Marin closes the hour.",
+      "events": [],
+      "quotes": []
     }
   ]
 }

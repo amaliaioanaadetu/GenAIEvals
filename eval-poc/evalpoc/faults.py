@@ -4,10 +4,11 @@ Each fault mimics a real failure mode of LLM extraction. Faults are applied to a
 a run; a fault counts as detected if the faulty run has a *new* failing result (one not
 present in the clean run) on the item the fault touched.
 """
-import copy
 import json
 from dataclasses import dataclass, asdict
 from pathlib import Path
+
+from .shape import flatten, nest
 
 
 @dataclass
@@ -92,8 +93,8 @@ PLAN = [
 
 def inject(clean_dir: Path, faulty_dir: Path) -> list:
     faulty_dir.mkdir(parents=True, exist_ok=True)
-    outputs = {p.stem: json.loads(p.read_text()) for p in sorted(clean_dir.glob("TR-*.json"))}
-    outputs = copy.deepcopy(outputs)
+    # Mutations are written against the flat shape; outputs are nested again before saving.
+    outputs = {p.stem: flatten(json.loads(p.read_text())) for p in sorted(clean_dir.glob("TR-*.json"))}
     faults = []
     for example_id, ftype, ref, desc, checks, mutate in PLAN:
         if example_id not in outputs:
@@ -101,7 +102,7 @@ def inject(clean_dir: Path, faulty_dir: Path) -> list:
         mutate(outputs[example_id])
         faults.append(Fault(example_id, ftype, ref, desc, checks))
     for example_id, out in outputs.items():
-        (faulty_dir / f"{example_id}.json").write_text(json.dumps(out, indent=2))
+        (faulty_dir / f"{example_id}.json").write_text(json.dumps(nest(out), indent=2))
     (faulty_dir / "faults.json").write_text(json.dumps([asdict(f) for f in faults], indent=2))
     return faults
 
